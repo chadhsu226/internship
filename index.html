@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>企業實習資訊｜銘傳大學財務金融學系</title>
+<meta name="description" content="銘傳大學財務金融學系 企業實習課程：系上轉發的企業實習與徵才資訊。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f8fafc; --ink:#0f172a; --body:#475569; --muted:#94a3b8; --line:#e2e8f0;
+    --card:#ffffff; --from:#84cc16; --to:#16a34a; --glow:#dcfce7;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Serif TC",serif;line-height:1.7}
+  a{color:inherit}
+  .mono{font-family:"DM Mono",monospace}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+  nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-bottom:1px solid #f1f5f9}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+  nav a{text-decoration:none;font-size:14px;color:#64748b}
+  nav a:hover{color:var(--ink)}
+  header{padding:48px 0 24px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
+  h1{font-size:clamp(28px,5vw,40px);font-weight:900;margin:8px 0 8px}
+  .lead{color:var(--body);max-width:720px;margin:0}
+  .note{margin-top:20px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:14px;padding:14px 18px;color:#166534;font-size:14px}
+  .bar{display:flex;align-items:center;gap:16px;margin:32px 0 16px}
+  .bar .line{flex:1;height:1px;background:var(--line)}
+  .filters{display:flex;gap:8px;flex-wrap:wrap}
+  .filters button{font:inherit;font-size:13px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 14px;cursor:pointer;color:#475569}
+  .filters button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;padding-bottom:56px}
+  @media (max-width:400px){.grid{grid-template-columns:1fr}}
+  .card{position:relative;background:var(--card);border:1px solid #f1f5f9;border-radius:20px;padding:22px;overflow:hidden;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-4px);box-shadow:0 22px 42px -14px var(--glow)}
+  .card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--from),var(--to))}
+  .card.closed{opacity:.6;filter:grayscale(.85)}
+  .card.closed:hover{transform:none;box-shadow:none}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+  .company{font-size:13px;color:#64748b;margin:0}
+  .card h3{font-size:19px;font-weight:700;margin:2px 0 10px;line-height:1.4}
+  .badge{flex-shrink:0;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px;white-space:nowrap}
+  .badge.open{background:#dcfce7;color:#15803d}
+  .badge.soon{background:#fef3c7;color:#b45309}
+  .badge.closed{background:#e2e8f0;color:#475569}
+  dl{display:grid;grid-template-columns:72px 1fr;gap:6px 10px;margin:0 0 14px;font-size:14px}
+  dt{color:var(--muted);font-weight:600}
+  dd{margin:0;color:var(--body)}
+  dd strong{color:var(--ink)}
+  .desc{font-size:14px;color:var(--body);margin:0 0 14px}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+  .tag{font-size:12px;background:#f1f5f9;color:#475569;border-radius:6px;padding:2px 8px}
+  .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+  .btn{font-size:13px;text-decoration:none;border-radius:10px;padding:8px 14px;border:1px solid var(--line);background:#fff;color:#334155;transition:background .2s,color .2s}
+  .btn:hover{background:#f1f5f9}
+  .btn.primary{background:linear-gradient(90deg,var(--from),var(--to));color:#fff;border-color:transparent;font-weight:700}
+  .btn.primary:hover{opacity:.92}
+  .btn.disabled{pointer-events:none;background:#e2e8f0;color:#94a3b8;border-color:#e2e8f0}
+  .meta{font-size:12px;color:var(--muted);margin-top:12px}
+  .empty{color:var(--muted);text-align:center;padding:40px 0;grid-column:1/-1}
+  footer{border-top:1px solid #f1f5f9;padding:24px 0;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a href="https://chadhsu226.github.io/" class="mono">← chadhsu226.github.io</a>
+    <a href="#list">實習列表</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header>
+    <div class="kicker mono">Corporate Internship · 財金系企業實習</div>
+    <h1>企業實習資訊</h1>
+    <p class="lead">這裡整理系上收到的企業實習與徵才訊息，每則都列出職缺、期間、待遇和申請截止日。申請請走各公司的官方招募管道。</p>
+    <div class="note">📌 若實習要認列為「企業實習」課程學分，申請前請先和授課老師或系辦確認認列方式。對職缺內容有疑問，<strong>請洽系辦</strong>或公司官方招募管道。</div>
+  </header>
+
+  <div class="bar" id="list">
+    <span class="kicker mono">實習列表 / OPENINGS</span>
+    <span class="line"></span>
+    <div class="filters" role="group" aria-label="篩選">
+      <button type="button" data-f="all" class="on">全部</button>
+      <button type="button" data-f="open">招募中</button>
+      <button type="button" data-f="closed">已截止</button>
+    </div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer>
+  <div class="wrap">銘傳大學財務金融學系 · 許智翔老師 整理 · 資訊以公司公告為準</div>
+</footer>
+
+<script>
+// 每則實習一筆資料；deadline 為申請截止日（台北時間當日 23:59 截止）
+const INTERNSHIPS = [
+  {
+    id: "2027-chailease",
+    company: "中租控股",
+    title: "2027 企金業務實習（一般業務、營建業務等）",
+    category: "業務",
+    eligibility: "大四、碩二在校生（不限科系）",
+    period: "2027/2/22（一）起，為期四個月（可延長滿一學期）；每週上班至少三天",
+    pay: "時薪 215 元",
+    location: "全台各縣市（各公司據點）",
+    deadline: "2026-12-31",
+    duties: ["業務前端名單蒐集", "電話推廣、實地拜訪", "深入了解並實戰企金業務工作"],
+    desc: "接觸企業客戶開發、電話推廣和實地拜訪，從實務中認識企業的資金需求與租賃融資業務。達成目標者可獲獎金，表現優異者優先轉為正職。",
+    apply: "https://ehrweb.104.com.tw/rsite.do?key=67A6AB996529B6BB072262888567939A7111D640",
+    files: [
+      { label: "實習計畫海報 JPG", href: "files/2027-chailease/poster.jpg" },
+      { label: "實習計畫 PDF", href: "files/2027-chailease/poster.pdf" }
+    ],
+    posted: "2026-11-12"
+  }
+];
+
+const DAY = 86400000;
+function deadlineMs(d){ return new Date(d + "T23:59:59+08:00").getTime(); }
+function fmt(d){ const [y,m,dd] = d.split("-"); const w = "日一二三四五六"[new Date(d+"T12:00:00+08:00").getDay()]; return `${y}/${+m}/${+dd}（${w}）`; }
+function esc(s){ return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+
+function status(item, now){
+  const left = deadlineMs(item.deadline) - now;
+  if (left < 0) return { key:"closed", label:"已截止" };
+  const days = Math.ceil(left / DAY);
+  if (days <= 14) return { key:"soon", label:`剩 ${days} 天` };
+  return { key:"open", label:"招募中" };
+}
+
+function render(filter){
+  const now = Date.now();
+  const rows = INTERNSHIPS.map(it => ({ it, st: status(it, now) }))
+    .filter(r => filter === "all" || (filter === "closed" ? r.st.key === "closed" : r.st.key !== "closed"))
+    .sort((a, b) => {
+      const ca = a.st.key === "closed", cb = b.st.key === "closed";
+      if (ca !== cb) return ca ? 1 : -1;
+      return ca ? deadlineMs(b.it.deadline) - deadlineMs(a.it.deadline) : deadlineMs(a.it.deadline) - deadlineMs(b.it.deadline);
+    });
+  const grid = document.getElementById("grid");
+  if (!rows.length){ grid.innerHTML = '<p class="empty">目前沒有符合的實習資訊。</p>'; return; }
+  grid.innerHTML = rows.map(({ it, st }) => {
+    const closed = st.key === "closed";
+    const files = (it.files || []).map(f => `<a class="btn" href="${esc(f.href)}" target="_blank" rel="noopener">📎 ${esc(f.label)}</a>`).join("");
+    const apply = it.apply
+      ? `<a class="btn primary${closed ? " disabled" : ""}" href="${esc(it.apply)}" target="_blank" rel="noopener"${closed ? ' aria-disabled="true" tabindex="-1"' : ""}>${closed ? "已截止" : "投遞履歷 ↗"}</a>`
+      : "";
+    return `<article class="card${closed ? " closed" : ""}">
+      <div class="top">
+        <div><p class="company">${esc(it.company)} · ${esc(it.category)}</p><h3>${esc(it.title)}</h3></div>
+        <span class="badge ${st.key}">${st.label}</span>
+      </div>
+      <dl>
+        <dt>申請截止</dt><dd><strong>${fmt(it.deadline)}</strong></dd>
+        <dt>申請資格</dt><dd>${esc(it.eligibility)}</dd>
+        <dt>實習期間</dt><dd>${esc(it.period)}</dd>
+        <dt>待遇</dt><dd>${esc(it.pay)}</dd>
+        <dt>地點</dt><dd>${esc(it.location)}</dd>
+      </dl>
+      <p class="desc">${esc(it.desc)}</p>
+      <div class="tags">${(it.duties || []).map(d => `<span class="tag">${esc(d)}</span>`).join("")}</div>
+      <div class="actions">${apply}${files}</div>
+      <p class="meta mono">公告日期 ${esc(it.posted)} · 聯絡：請洽系辦</p>
+    </article>`;
+  }).join("");
+}
+
+document.querySelectorAll(".filters button").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".filters button").forEach(x => x.classList.toggle("on", x === b));
+  render(b.dataset.f);
+}));
+render("all");
+</script>
+</body>
+</html>
